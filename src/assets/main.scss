@@ -1,0 +1,28 @@
+@import '@fontsource-variable/montserrat';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Montserrat Variable', sans-serif;
+  background-color: darkcyan;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  max-height: 90%;
+  overflow: auto;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+

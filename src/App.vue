@@ -9,6 +9,17 @@ export default {
     return {
       titolo: 'Eccoci su Vue'
     }
+  },
+  methods: {
+    getApi() {
+      axios.get(store.apiUrl + 'projects')
+      .then(results => {
+          console.log(results.data);
+      })
+    }
+  },
+  mounted() {
+    this.getApi();
   }
 }
 </script>

@@ -24,10 +24,10 @@ export default {
     <li v-for="project in projects" :key="project.id">
         <strong><p>{{ project.name }}</p></strong>
         <p>{{ project.description }}</p>
-        <strong><p>{{ project.technologies }}</p></strong>
+        <strong><p>{{ project.technology }}</p></strong>
         <p>{{ project.image }}</p>
-        <p>{{ project.types }}</p>
-      </li>
+        <p>{{ project.type }}</p>
+    </li>
   </ul>
 </template>
 

@@ -13,7 +13,7 @@ export default {
 
   data() {
     return {
-      titolo: 'I miei Progetti'
+
     }
   },
 

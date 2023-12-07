@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+.debug {
+  border: 1px solid black;
+}
+
 body {
   height: 100vh;
   font-family: 'Montserrat Variable', sans-serif;
@@ -18,11 +22,15 @@ body {
 
 .container {
   max-width: 1200px;
-  max-height: 90%;
   overflow: auto;
   margin: 0 auto;
   padding: 10px;
   border: 1px solid lightgray;
   border-radius: 10px;
+  .project-b {
+    height: 700px;
+  }
 }
+
+
 

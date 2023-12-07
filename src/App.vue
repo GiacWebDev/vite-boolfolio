@@ -2,22 +2,31 @@
 
 import axios from "axios";
 import { store } from "./data/store";
+import ProjectComponent from "./components/ProjectComponent.vue";
 
 export default {
   name: 'App',
+
+  components: {
+    ProjectComponent
+  },
+
   data() {
     return {
-      titolo: 'Eccoci su Vue'
+      titolo: 'I miei Progetti'
     }
   },
+
   methods: {
     getApi() {
-      axios.get(store.apiUrl + 'projects')
+      axios.get(store.apiUrl)
       .then(results => {
           console.log(results.data);
+          store.projects = results.data;
       })
     }
   },
+
   mounted() {
     this.getApi();
   }
@@ -26,7 +35,9 @@ export default {
 
 <template>
   <div class="container">
-    <h1>{{ titolo }}</h1>
+
+    <ProjectComponent />
+
   </div>
 </template>
 

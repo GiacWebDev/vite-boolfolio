@@ -3,17 +3,20 @@
 import axios from "axios";
 import { store } from "./data/store";
 import ProjectComponent from "./components/ProjectComponent.vue";
+import Loader from './components/partials/Loader.vue';
 
 export default {
   name: 'App',
 
   components: {
-    ProjectComponent
+    ProjectComponent,
+    Loader
   },
 
   data() {
     return {
-
+      titolo: 'I miei Progetti',
+      isLoaded: false
     }
   },
 
@@ -21,6 +24,7 @@ export default {
     getApi() {
       axios.get(store.apiUrl)
       .then(results => {
+          this.isLoaded = true
           console.log(results.data);
           store.projects = results.data;
       })
@@ -36,7 +40,8 @@ export default {
 <template>
   <div class="container">
 
-    <ProjectComponent />
+    <Loader v-if="!isLoaded"/>
+    <ProjectComponent v-else/>
 
   </div>
 </template>

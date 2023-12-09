@@ -1,22 +1,29 @@
 <script>
 
 export default {
-  name: 'App',
-
+  name: 'Home',
   data() {
     return {
     }
   },
-
+  components: {},
   methods: {},
-  mounted() {}
+  mounted() {
+ 
+  },
+  computed: {},
 }
+
 </script>
 
+
 <template>
-  <div>App</div>
+
+  <div>Home</div>
+
 </template>
 
-<style lang="scss">
+
+<style lang="scss" scoped>
 
 </style>

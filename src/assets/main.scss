@@ -11,11 +11,14 @@
 }
 
 body {
-  height: 100vh;
   font-family: 'Montserrat Variable', sans-serif;
   background-color: darkcyan;
   color: white;
+}
+
+.main-wrapper {
   display: flex;
+  height: 100vh;
   justify-content: center;
   align-items: center;
 }

@@ -23,10 +23,10 @@ export default {
     <nav>
       <ul>
         <li>
-          <a href="/">Home</a>
+          <router-link :to="{name: 'home'}">Home</router-link>
         </li>
         <li>
-          <a href="/chi-siamo">Chi siamo</a>
+          <router-link :to="{name: 'about'}">Chi siamo</router-link>
         </li>
       </ul>
     </nav>

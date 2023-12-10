@@ -2,17 +2,13 @@
 
 import axios from "axios";
 import { store } from "./data/store";
-import ProjectComponent from "./components/ProjectComponent.vue";
-import Loader from './components/partials/Loader.vue';
 import Header from './components/partials/Header.vue';
 
 export default {
   name: 'App',
 
   components: {
-    ProjectComponent,
-    Loader,
-    Header
+    Header,
   },
 
   data() {
@@ -44,13 +40,13 @@ export default {
   <Header />
   <routerView />
 
-    <div class="main-wrapper">
+    <!-- <div class="main-wrapper">
       <div class="container">
         <Loader v-if="!isLoaded"/>
         <ProjectComponent v-else/>
       </div>
-    </div>
-    
+    </div> -->
+
 </template>
 
 <style lang="scss">

@@ -42,14 +42,15 @@ export default {
 <template>
   
   <Header />
-  
   <routerView />
+
     <div class="main-wrapper">
       <div class="container">
         <Loader v-if="!isLoaded"/>
         <ProjectComponent v-else/>
       </div>
     </div>
+    
 </template>
 
 <style lang="scss">

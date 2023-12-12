@@ -4,11 +4,14 @@ import { store } from '../data/store';
 
 export default {
   name: 'ProjectComponent',
+  props: ['projects'],
+
   data() {
     return {
       store,
     }
   },
+
   components: {},
   methods: {},
   mounted() {
@@ -19,25 +22,33 @@ export default {
 
 </script>
 
+
+
 <template>
-  <h1>I miei Progetti</h1>
 
-  <div class="project-b">
-    
-    <ul>
-      <li v-for="project in store.projects" :key="project.id">
-          <strong><p>{{ project.name }}</p></strong>
-          <p>{{ project.description }}</p>
-          <strong><p>{{ project.technology }}</p></strong>
-          <p>{{ project.image }}</p>
-          <p>{{ project.type }}</p>
-      </li>
-    </ul>
-
+  <div>
+    <div class="project-card" v-for="project in projects" :key="project.id">
+      <h3>{{ project.name }}</h3>
+      <p>{{ project.description }}</p>
+      <p>{{ project.technology }}</p>
+      <p>{{ project.image }}</p>
+      <p>{{ project.type }}</p>
+    </div>
   </div>
   
 </template>
 
+
+
 <style lang="scss" scoped>
+
+.project-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
 
 </style>

@@ -18,18 +18,23 @@ export default {
   data() {
     return {
       titolo: 'I miei Progetti',
-      isLoaded: false
+      isLoaded: false,
+      localProjects: [] 
     }
   },
 
   methods: {
     getApi() {
       axios.get(store.apiUrl)
-      .then(results => {
-          this.isLoaded = true
+        .then(results => {
+          this.isLoaded = true;
           console.log(results.data);
-          store.projects = results.data;
-      })
+          console.log(this.localProjects)
+          this.localProjects = results.data; 
+        })
+        .catch(error => {
+          console.error('Errore', error);
+        });
     }
   },
 
@@ -39,18 +44,24 @@ export default {
 }
 </script>
 
+
+
 <template>
   
   <Header />
 
   <routerView />
-    <div class="main-wrapper">
-      <div class="container">
-        <Loader v-if="!isLoaded"/>
-        <ProjectComponent v-else/>
-      </div>
+
+  <div class="main-wrapper">
+    <div class="container">
+      <Loader v-if="!isLoaded" />
+      <ProjectComponent v-else :projects="localProjects" />
     </div>
+  </div>
+
 </template>
+
+
 
 <style lang="scss">
 

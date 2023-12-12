@@ -24,13 +24,16 @@ export default {
 
   methods: {
     getApi() {
-      axios.get(store.apiUrl)
+    axios.get(store.apiUrl)
       .then(results => {
-          this.isLoaded = true
-          console.log(results.data);
-          store.projects = results.data;
+        this.isLoaded = true;
+        console.log(results.data);  
+        this.localProjects = results.data;
       })
-    }
+      .catch(error => {
+        console.error('Errore', error);
+      });
+  }
   },
 
   mounted() {

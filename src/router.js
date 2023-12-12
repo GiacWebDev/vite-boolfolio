@@ -1,7 +1,7 @@
 import {createRouter, createWebHistory} from 'vue-router';
 // importo i componenti delle pagine
 import Home from './pages/Home.vue'
-import About from './pages/About.vue'
+import Progetti from './pages/Progetti.vue'
 import Error404 from './pages/Error404.vue'
 
 const router = createRouter({
@@ -15,9 +15,9 @@ const router = createRouter({
       component: Home
     },
     {
-      path: '/chi-siamo',
-      name: 'about',
-      component: About
+      path: '/progetti',
+      name: 'progetti',
+      component: Progetti
     },
 
     {

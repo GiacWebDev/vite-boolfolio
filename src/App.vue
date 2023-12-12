@@ -43,7 +43,7 @@ export default {
   
   <Header />
 
-  <routerView />
+  <router-view />
     <!-- <div class="main-wrapper">
       <div class="container">
         <Loader v-if="!isLoaded"/>

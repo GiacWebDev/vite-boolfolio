@@ -26,7 +26,7 @@ export default {
           <router-link :to="{name: 'home'}">Home</router-link>
         </li>
         <li>
-          <router-link :to="{name: 'about'}">Chi siamo</router-link>
+          <router-link :to="{name: 'progetti'}">Progetti</router-link>
         </li>
       </ul>
     </nav>

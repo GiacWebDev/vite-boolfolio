@@ -7,7 +7,7 @@ import Loader from '../components/partials/Loader.vue';
 import Header from '../components/partials/Header.vue';
 
 export default {
-  name: 'App',
+  name: 'progetti',
 
   components: {
     ProjectComponent,

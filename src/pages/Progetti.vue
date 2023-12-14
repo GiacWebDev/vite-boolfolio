@@ -29,8 +29,8 @@ export default {
         .then(results => {
           this.isLoaded = true;
           console.log(results.data);
-          console.log(this.localProjects)
           this.localProjects = results.data; 
+          console.log(this.localProjects)
         })
         .catch(error => {
           console.error('Errore', error);
@@ -47,10 +47,7 @@ export default {
 
 
 <template>
-  
-  <Header />
 
-  <routerView />
 
   <div class="main-wrapper">
     <div class="container">

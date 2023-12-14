@@ -1,9 +1,10 @@
 @import '@fontsource-variable/montserrat';
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 .debug {
@@ -30,9 +31,7 @@ body {
   padding: 10px;
   border: 1px solid lightgray;
   border-radius: 10px;
-  .project-b {
-    height: 700px;
-  }
+  height: 700px;
 }
 
 
